@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Homework-4/2</title>
+</head>
+
+<body style="display: flex;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dce3e9;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/client/index.html">The Mob > Аggiungi un mafiusu </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Add Memeber</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <h6 style="margin: 20px">Please feel free to add names that you think are capable of completing the list of mobsters who have helped or are helping to make our lives more unbearable.</h6>
+            <div id="members" >
+                <form>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Photo of mobster</label>
+                        <input type="text" class="form-control" id="image" >
+                      </div>
+                    <div class="mb-3">
+                      <label for="firstName" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="firstName" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="lastName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="description"></textarea>
+                      </div>
+                      <p style="margin: 20px" >Before pushing the submit, please think about what you should put in the mobster's description. First of all, for your personal safety, check the meaning of the word <a href="https://en.wikipedia.org/wiki/Omert%C3%A0" target="_blank">omertà</a> and the profitability of your actions. &#128512; </p>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                  </form>
+            </div>
+        </main>
+    </div>
+
+<script src="./add-memb.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+[
+    {
+        "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp1OAMnbY08-yUsbNjxm3MDIinYlnFQ33JEiJb1hqO1gGMT77DP-A3EUO9lkCJCaisYO8&usqp=CAU",
+        "firstName": "Paul",
+        "lastName": "Kally",
+        "description": "The Five Points Gang included some who later became prominent criminals in their own right, including Johnny Torrio, Al Capone, Lucky Luciano, Meyer Lansky and Frankie Yale."
+    },
+    {
+        "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxaR0Jg2PTc2fPVx09gQ_pLzd6L6OnGadogw&usqp=CAU",
+        "firstName": "Johnny",
+        "lastName": "Torrio",
+        "description": "(January 20, 1882 – April 16, 1957) was an Italian-American mobster who helped build the Chicago Outfit in the 1920s. It was later inherited by his protégé Al Capone.[2] Torrio proposed a National Crime Syndicate in the 1930s and later became an adviser to Lucky Luciano and his Luciano crime family."
+    },
+    {
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Al_Capone_in_1930.jpg/220px-Al_Capone_in_1930.jpg",
+        "firstName": "Al",
+        "lastName": "Capone",
+        "description": "Alphonse Gabriel Capone ( January 17, 1899 – January 25, 1947), sometimes known by the nickname 'Scarface', was an American gangster and businessman who attained notoriety during the Prohibition era as the co-founder and boss of the Chicago Outfit. His seven-year reign as a crime boss ended when he went to prison at the age of 33."
+    },
+    {
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/LuckyLucianoSmaller.jpeg/220px-LuckyLucianoSmaller.jpeg",
+        "firstName": "Lucky",
+        "lastName": "Luciano",
+        "description": "Charles 'Lucky' Luciano ( born Salvatore Lucania[2] [salvaˈtoːre lukaˈniːa];[3] November 24, 1897 – January 26, 1962) was an Italian-born gangster who operated mainly in the United States. Luciano started his criminal career in the Five Points gang and was instrumental in the development of the National Crime Syndicate. "
+    },
+    {
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Meyer_Lansky_NYWTS_1_retouched.jpg/220px-Meyer_Lansky_NYWTS_1_retouched.jpg",
+        "firstName": "Mayer",
+        "lastName": "Lanskey",
+        "description": "Meyer Lansky (born Meier Suchowlański; July 4, 1902 – January 15, 1983), known as the 'Mob's Accountant', was an American organized crime figure of Polish birth who, along with his associate Charles 'Lucky' Luciano, was instrumental in the development of the National Crime Syndicate in the United States.[3][4]"
+    },
+    {
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/en/5/5f/Frankyale.jpg",
+        "firstName": "Frankie",
+        "lastName": "Yale",
+        "description": "Francesco Ioele ( January 22, 1893 – July 1, 1928), known as Frankie Yale or Frankie Uale, was an Italian-born American gangster based in Brooklyn and second employer of Al Capone."
+    },
+    {
+        "imgSrc": "https://iportal.mk/wp-content/uploads/2017/05/zaev-360.png",
+        "firstName": "Zoran ",
+        "lastName": "Zaev",
+        "description": "Никогаш повеќе да не се повтори и никогаш повеќе нема да се повтори тоа што и се случуваше на Македонија."
+    }
+]
