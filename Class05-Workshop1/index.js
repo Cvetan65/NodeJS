@@ -1,10 +1,12 @@
 const express = require('express');
 const globalRouter = require('./const/router.const');
+const createSession = require('./const/session.const')
 
 const app = express();
 
 app.use(express.json());
 
+app.use(createSession);
 
 app.use(globalRouter);
 

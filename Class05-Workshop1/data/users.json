@@ -1,0 +1,20 @@
+[
+    {
+      "id": "7b325cb7-89d4-4ea2-a8ba-03792b324f78",
+      "email": "test@gmail.com",
+      "password": "test123",
+      "role": "user"
+    },
+    {
+      "id": "deb5faaf-57f3-4295-aa2e-6e21d883a255",
+      "email": "best@gmail.com",
+      "password": "best123",
+      "role": "admin"
+    },
+    {
+      "id": "2b4baec0-8ebe-4d00-8317-c7dc95fcea8a",
+      "email": "rest@gmail.com",
+      "password": "rest123",
+      "role": "user"
+    }
+  ]

@@ -1,17 +1,21 @@
 const router = require('express').Router();
-const DishController = require('../controlles/dish.controller');
+const DishController = require('../controllers/dish.controller');
+const sessinoValidator = require('../middleware/session-validator.middleware');
+const roleValidator = require('../middleware/role-validator.middleware');
 
-router.use('/all', DishController.fetchAllDishes);
+router.use(roleValidator);
 
-router.use('/name', DishController.fetchDishByName)
+router.get('/all', sessinoValidator, DishController.fetchAllDishes);
 
-router.use('/:id', DishController.fetchDishById);
+router.get('/name', sessinoValidator, DishController.fetchDishByName)
 
-router.use('/add', DishController.createNewDish);
+router.get('/:id', sessinoValidator, DishController.fetchDishById);
 
-router.use('/:id/update', DishController.updateDish);
+router.post('/add', DishController.createNewDish);
 
-router.use('/:id', DishController.deleteDish);
+router.post('/:id/update', DishController.updateDish);
+
+router.delete('/:id', DishController.deleteDish);
 
 
 

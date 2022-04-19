@@ -15,7 +15,7 @@ class DishController {
        try {
            const dishName = req.body.name;
 
-           const name = await DishModel.getDishByName(dishName);
+           const dish = await DishModel.getDishByName(dishName);
 
            res.status(200).send(dish)
        } catch (error) {

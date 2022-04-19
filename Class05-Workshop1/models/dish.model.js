@@ -1,82 +1,92 @@
 const path = require('path');
 const DataService = require('../services/data.service');
-const {v4: uuid} = require('uuid');
+const { v4: uuid } = require('uuid');
 
 const dishesPath = path.join(__dirname, '..', 'data', 'dish.json');
 
 class DishModel {
-    static async getAllDishes() {
-        return DataService.readJSONFile(dishesPath);
-    }
-    
-static async getDishByName(dishName){
+  static async getAllDishes() {
+    return DataService.readJSONFile(dishesPath);
+  }
+
+  static async getDishByName(dishName) {
     const dishes = await this.getAllDishes();
 
-    const fondDishByName = dishes.find(dish => dish.name === dishName);
+    const fondDishByName = dishes.find((dish) => dish.name === dishName);
 
-    if (foundDishByName) {
-        return foundDishByName;
+    if (fondDishByName) {
+      return fondDishByName;
     } else {
-        return Promise.reject({msg: 'No Dish Found'})
+      return Promise.reject({ msg: 'No Dish Found' });
     }
-}
+  }
 
-    static async getDishById(dishId) {
-        const dishes = await this.getAllDishes();
+  static async getDishById(dishId) {
+    const dishes = await this.getAllDishes();
 
-        const foundDish = dishes.find(dish => dish.id === dishId);
+    const foundDish = dishes.find((dish) => dish.id === dishId);
 
-        if (foundDish) {
-            return foundDish
-        } else {
-            return Promise.reject({msg: 'No dish found'})
-        }
+    if (foundDish) {
+      return foundDish;
+    } else {
+      return Promise.reject({ msg: 'No dish found' });
     }
+  }
 
-    static async addNewDish(newDishData) {
-        const dishes = await this.getAllDishes();
+  static async addNewDish(newDishData) {
+    const dishes = await this.getAllDishes();
 
-        const dishExists = dishes.some(dish => dish.name === newDishData.name); 
+    const dishExists = dishes.some((dish) => dish.name === newDishData.name);
 
-        if (dishExists) {
-            return Promise.reject({msg: 'The dish alerady exists'})
-        }
-
-        const newDish = {
-            id: uuid, 
-            ...newDishData
-        }
-
-        const updatedDishes = [...dishes, newDish];
-
-        await DataService.saveJSONFile(dishesPath, updatedDishes);
-
-        return newDish;
+    if (dishExists) {
+      return Promise.reject({ msg: 'The dish alerady exists' });
     }
 
-    static async patchDish(dishId, dishesUpdatedData) {
-        const dishes = await this.getAllDishes();
+    const newDish = {
+      id: uuid(),
+      ...newDishData
+    };
 
-        const foundDish = await this.getDishById(dishId);
+    console.log(newDish.price);
 
-        const updtedDish = {...foundDish, ...dishesUpdatedData};
-
-        const updatedDishes = dishes.map(dish => dish.id === foundDish.id ? updatedDishes : dish);
-
-        await DataService.saveJSONFile(dishesPath, updatedDishes);
+    if (newDish.price <= 1 || newDish.price >= 1000) {
+      return Promise.reject({
+        msg: 'There can be no price less than 1 and more than 1000'
+      });
     }
 
-    static async deleteDish(dishId) {
-        const dishes = await this.getAllDishes();
+    const updatedDishes = [...dishes, newDish];
 
-        const updatedDishes = dishes.filter(dish => dish.id !== dishId);
+    await DataService.saveJSONFile(dishesPath, updatedDishes);
 
-        if (updatedDishes.longth === dishes.length) {
-            return Promise.reject({msg: 'Dish Not Found'})
-        }
+    return newDish;
+  }
 
-        await DataService.saveJSONFile(dishesPath, updatedDishes)
+  static async patchDish(dishId, dishesUpdatedData) {
+    const dishes = await this.getAllDishes();
+
+    const foundDish = await this.getDishById(dishId);
+
+    const updtedDish = { ...foundDish, ...dishesUpdatedData };
+
+    const updatedDishes = dishes.map((dish) =>
+      dish.id === foundDish.id ? updatedDishes : dish
+    );
+
+    await DataService.saveJSONFile(dishesPath, updatedDishes);
+  }
+
+  static async deleteDish(dishId) {
+    const dishes = await this.getAllDishes();
+
+    const updatedDishes = dishes.filter((dish) => dish.id !== dishId);
+
+    if (updatedDishes.longth === dishes.length) {
+      return Promise.reject({ msg: 'Dish Not Found' });
     }
+
+    await DataService.saveJSONFile(dishesPath, updatedDishes);
+  }
 }
 
 module.exports = DishModel;
