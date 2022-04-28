@@ -5,6 +5,6 @@ const authRouter = require('../routes/auth.routes');
 
 router.use('/dishes', dishesRouter);
 router.use('/orders', ordersRouter);
-router.use('/auth', authRouter)
+router.use(authRouter)
 
 module.exports = router;
